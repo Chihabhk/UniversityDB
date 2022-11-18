@@ -12,7 +12,7 @@ using UniversityApiBackend.DataAcess;
 namespace UniversityApiBackend.Migrations
 {
     [DbContext(typeof(UniversityDBContext))]
-    [Migration("20221118025438_Create Cursos table")]
+    [Migration("20221118034424_Create Cursos table")]
     partial class CreateCursostable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,6 +58,9 @@ namespace UniversityApiBackend.Migrations
 
                     b.Property<string>("largeDescription")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("level")
+                        .HasColumnType("int");
 
                     b.Property<string>("name")
                         .IsRequired()

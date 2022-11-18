@@ -57,6 +57,9 @@ namespace UniversityApiBackend.Migrations
                     b.Property<string>("largeDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("level")
+                        .HasColumnType("int");
+
                     b.Property<string>("name")
                         .IsRequired()
                         .HasMaxLength(50)

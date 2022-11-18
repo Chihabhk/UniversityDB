@@ -2,6 +2,7 @@
 
 namespace UniversityApiBackend.Models.DataModels
 {
+    public enum levelEnum { Basic, Intermediate, Advanced }
     public class Curso: BaseEntity
     {
         [Required, StringLength(50)]
@@ -19,7 +20,7 @@ namespace UniversityApiBackend.Models.DataModels
         [Required]
         public string? requirements { get; set; }
 
-        public enum level {Basic, Intermediate, Advanced}
-
+        [Required]
+        public levelEnum level { get; set; }
     }
 }
